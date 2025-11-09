@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <!--Head-->
+    {% include "templates/base_head.html" %}
+
+    <body>
+        <div id="main">
+            <!--Шапка (фото) / Верхняя линия меню (background)-->
+            {% include "templates/base_header.html" %}
+            
+            <!--Блок с информацией-->
+            <div id="container">
+                <h2>EaseUS Data Recovery Wizard</h2>
+                <img class="progscrn" src="../static/images/easeusdrw.png" width="30%">
+                <p>
+                    EaseUS DRW – это популярное программное обеспечение, которое предназначено для восстановления данных, потерянных при форматировании, удалении, повреждении раздела или логического диска, внезапном выключении системы, сбое питания и т.п. Данное приложение доступно для двух платформ Windows и Mac.
+                </p>
+                <p>
+                    По результатам проверки программ по восстановлению данных, эта программа восстановила все только что удалённые файлы, а именно 75 файлов, а также 153 других ("потеряных" и системных). "Потерянные" файлы "привязаны" к папкам.
+                    Опыт проводился с помощью флешки, которая заранее была отформатирована, и были залиты 75 файлов распределённых по папкам. 10 файлов: .xls, .txt, .ppt, .pdf, .mp3, .doc; 15 файлов: .jpg.
+                </p>
+                <div class="clear"></div>
+                <p class="namelist">Существует в 3 версиях:</p>
+                <ul class="list">
+                    <li>Free</li>
+                    <li>Professional</li>
+                    <li>Technician</li>
+                </ul>
+            </div>
+            <!--Подвал-->
+            {% include "templates/base_footer.html" %}
+
+	        <!-- Кнопка "Наверх" -->
+            <div id="scrollToTop" class="scroll-to-top">
+                <i class="fas fa-chevron-up"></i>
+            </div>
+        </div>
+
+        <script src="../static/js/up_button.js"></script>
+    </body>
+</html>

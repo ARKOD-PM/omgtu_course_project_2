@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <!--Head-->
+    {% include "templates/base_head.html" %}
+
+    <body>
+        <div id="main">
+            <!--Шапка (фото) / Верхняя линия меню (background)-->
+            {% include "templates/base_header.html" %}
+            
+            <!--Блок с информацией-->
+            <div id="container">
+                <h2>Eraser</h2>
+                <img class="progscrn image" src="../static/images/eraser.png" width="30%">
+                <div id="information">
+                    <p>
+                        Eraser – бесплатный файловый шреддер, предназначенный для безвозвратного удаления информации с различных носителей. Eraser может перезаписывать информацию различными шаблонами (Имеет 14 собственных шаблонов, а так же редактор для создания новых). На их форуме ведется достаточно активная жизнь, что позволяет быстро найти ответы на свои вопросы и проблемы. Работает с любыми дисками (включая IDE, SCSI, и RAID), и с FAT16, FAT32, и NTFS разделами.
+                    </p>
+                    <div class="clear"></div>
+                    <p>
+                        После установки программы, при щелчке правой кнопки мыши по любому файлу, в контекстном меню у нас появляется новый элемент – "Eraser".
+                        У этого элемента есть два пункта: Erase и Secure Move.
+                    </p>
+                    <p>
+                        Erase – безвозвратно удалит файл или несколько выбранных вами файлов. Но прежде чем удалять, Eraser попросит от вас подтверждение. Ведь после этого удаления файлы нельзя будет восстановить.
+                    </p>
+                    <p>
+                        Secure Move – скопирует выбранные вами файлы в новое место, а "старые" удалит.
+                    </p>
+                    <p class="namelist">Функционал по удалению данных:</p>
+                    <ul class="list">
+                        <li>Стирание как файлов, папкок, так и всего носителя.</li>
+                        <li>Удаление лишней информации со свободного места на носителе.</li>
+                        <li>Выбор метода стирания данных с носителей.</li>
+                        <li>Перенос выбранных файлов в другое место, стирая их с прошлого места.</li>
+                    </ul>
+                    <p class="namelist">Существует в одной версии:</p>
+                    <ul class="list">
+                        <li>Free</li>
+                    </ul>
+                    <p class="namelist">Способы форматирования носителей:</p>
+                    <ul class="list">
+                        <li>Pseudorandom Data (1 проход)</li>
+                        <li>British HMG IS5 (Baseline) (1 проход)</li>
+                        <li>Russian GOST P50739-95 (2 прохода)</li>
+                        <li>US Army AR380-19 (3 прохода)</li>
+                        <li>US Air Force 5020 (3 прохода)</li>
+                        <li>British HMG IS5 (Enhanced) (3 прохода)</li>
+                        <li>US DoD 5220.22-M (8-306./E) (3 прохода)</li>
+                        <li>German VSITR (7 проходов)</li>
+                        <li>Schneier 7 pass (7 проходов)</li>
+                        <li>RCMP TSSIT OPS-I (7 проходов)</li>
+                        <li>US DoD 5220.22-M (8-306./E, C & E) (7 проходов)</li>
+                        <li>Gutmann (35 проходов)</li>
+                    </ul>
+                </div>
+            </div>
+            <!--Подвал-->
+            {% include "templates/base_footer.html" %}
+
+	        <!-- Кнопка "Наверх" -->
+            <div id="scrollToTop" class="scroll-to-top">
+                <i class="fas fa-chevron-up"></i>
+            </div>
+        </div>
+        
+        <script src="../static/js/up_button.js"></script>
+    </body>
+</html>

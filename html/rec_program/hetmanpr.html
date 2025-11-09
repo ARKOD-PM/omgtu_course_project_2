@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <!--Head-->
+    {% include "templates/base_head.html" %}
+
+    <body>
+        <div id="main">
+            <!--Шапка (фото) / Верхняя линия меню (background)-->
+            {% include "templates/base_header.html" %}
+
+            <!--Блок с информацией-->
+            <div id="container">
+                <h2>Hetman Partition Recovery</h2>
+                <img class="progscrn" src="../static/images/hetmanpr.png" width="30%">
+                <p>
+                    Hetman Partition Recovery – условно бесплатная программа для восстановления удаленных данных с жестких дисков и любых других носителей информации. Утилита поддерживает как рабочие диски, так поврежденные логические разделы, восстанавливает информацию с отформатированных дисков и с дисков после изменения файловой системы с FAT на NTFS (и наоборот).
+                </p>
+                <p>
+                    По результатам проверки программ по восстановлению данных, эта программа восстановила все только что удалённые файлы, а именно 75 файлов, а также 76 других ("потеряных" и системных). "Потерянные" файлы "привязаны" к папкам.
+                    Опыт проводился с помощью флешки, которая заранее была отформатирована, и были залиты 75 файлов распределённых по папкам. 10 файлов: .xls, .txt, .ppt, .pdf, .mp3, .doc; 15 файлов: .jpg.
+                </p>
+                <div class="clear"></div>
+                <p class="namelist">Существует в трёх версиях:</p>
+                <ul class="list">
+                    <li>Home Edition</li>
+                    <li>Office Edition</li>
+                    <li>Commercial Edition</li>
+                </ul>
+            </div>
+            <!--Подвал-->
+            {% include "templates/base_footer.html" %}
+
+	        <!-- Кнопка "Наверх" -->
+            <div id="scrollToTop" class="scroll-to-top">
+                <i class="fas fa-chevron-up"></i>
+            </div>
+        </div>
+        
+        <script src="../static/js/up_button.js"></script>
+    </body>
+</html>

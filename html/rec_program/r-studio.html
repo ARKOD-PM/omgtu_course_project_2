@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <!--Head-->
+    {% include "templates/base_head.html" %}
+
+    <body>
+        <div id="main">
+            <!--Шапка (фото) / Верхняя линия меню (background)-->
+            {% include "templates/base_header.html" %}
+
+            <!--Блок с информацией-->
+            <div id="container">
+                <h2>R-Studio</h2>
+                <img class="progscrn" src="../static/images/r-studio.png" width="30%">
+                <p>
+                    R-Studio – группа полнофункциональных утилит для восстановления данных, включающая в себя как версии для Windows OS, так и приложения, работающие в среде Mac OS и Linux OS. Данные могут восстанавливаться с жёстких дисков (HDD), твёрдотельных устройств (SSD), флэш-памяти и аналогичных внешних и внутренних накопителей данных. Существуют версии под Windows, Mac и Linux.
+                </p>
+                <p>
+                    По результатам проверки программ по восстановлению данных, эта программа восстановила все только что удалённые файлы, а именно 75 файлов, а также 78 других ("потеряных" и системных). "Потерянные" файлы "привязаны" к папкам.
+                    Опыт проводился с помощью флешки, которая заранее была отформатирована, и были залиты 75 файлов распределённых по папкам. 10 файлов: .xls, .txt, .ppt, .pdf, .mp3, .doc; 15 файлов: .jpg.
+                </p>
+                <div class="clear"></div>
+                <p class="namelist">Существует в 5 версиях:</p>
+                <ul class="list">
+                    <li>R-Studio NTFS (Нет для Mac и Linux)</li>
+                    <li>R-Studio FAT (Нет для Mac и Linux)</li>
+                    <li>R-Studio</li>
+                    <li>R-Studio Network</li>
+                    <li>R-Studio Technical</li>
+                </ul>
+            </div>
+            <!--Подвал-->
+            {% include "templates/base_footer.html" %}
+
+	        <!-- Кнопка "Наверх" -->
+            <div id="scrollToTop" class="scroll-to-top">
+                <i class="fas fa-chevron-up"></i>
+            </div>
+        </div>
+
+        <script src="../static/js/up_button.js"></script>
+    </body>
+</html>

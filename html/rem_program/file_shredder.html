@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <!--Head-->
+    {% include "templates/base_head.html" %}
+
+    <body>
+        <div id="main">
+            <!--Шапка (фото) / Верхняя линия меню (background)-->
+            {% include "templates/base_header.html" %}
+            
+            <!--Блок с информацией-->
+            <div id="container">
+                <h2>File Shredder</h2>
+                <img class="progscrn" src="../static/images/file_shredder.png" width="30%">
+                <p>
+                    File Shredder – бесплатный файловый шреддер, предназначенный для безвозвратного удаления информации с различных носителей. Примечание: программа считается устаревшей и не рекомендуется для использования на современных SSD-дисках.
+                </p>
+                <div class="clear"></div>
+                <p class="namelist">Функционал по удалению данных:</p>
+                <ul class="list">
+                    <li>Стирание как файлов, папкок, так и всего носителя.</li>
+                    <li>Удаление лишней информации со свободного места на носителе.</li>
+                    <li>Выбор метода стирания данных с носителей.</li>
+                </ul>
+                <p class="namelist">Существует в одной версии:</p>
+                <ul class="list">
+                    <li>Free</li>
+                </ul>
+                <p class="namelist">Способы удаления данных:</p>
+                <ul class="list">
+                    <li>Simple (1 проход)</li>
+                    <li>Simple (2 прохода)</li>
+                    <li>DoD 5220-22.M (3 переходов)</li>
+                    <li>Secure erasing (7 проходов)</li>
+                    <li>Gutmann (35 проходов)</li>
+                </ul>
+            </div>
+            <!--Подвал-->
+            {% include "templates/base_footer.html" %}
+
+	        <!-- Кнопка "Наверх" -->
+            <div id="scrollToTop" class="scroll-to-top">
+                <i class="fas fa-chevron-up"></i>
+            </div>
+        </div>
+        
+        <script src="../static/js/up_button.js"></script>
+    </body>
+</html>

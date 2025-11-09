@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+     <!--Меню-->
+    {% include "templates/base_head.html" %}
+
+    <body>
+        <div id="main">
+            <!--Шапка (фото) / Верхняя линия меню (background)-->
+            {% include "templates/base_header.html" %}
+
+            <!--Блок с информацией-->
+            <div id="container">
+                <h2>CCleaner</h2>
+                <img class="progscrn" src="../static/images/ccleaner.png" width="30%">
+                <p>
+                    CCleaner – один из лучших наборов инструментов для оптимизации операционной системы и очистки ее от всевозможного мусора. Благодаря этой программе, компьютер начинает работать быстрее и стабильнее, а производительность конфигурации Вашей машины находится на самых высоких показателях. При этом в этой программе есть функционал файлового шреддера, что делает её универсальной. С 30 января 2024 года программа официально прекратила свою работу на территории России. При запуске программы на данной территории появляется ошибка и CCleaner завершает свою работу. <a href="https://dzen.ru/a/ZfscH6_SImF872G4" target="_blank" rel="noopener">Решение проблемы</a>.
+                </p>
+                <div class="clear"></div>
+                <p class="namelist">Функционал по удалению данных:</p>
+                <ul class="list">
+                    <li>Удаление программ с отчисткой реестра.</li>
+                    <li>Форматирование диска четырьмя способами.</li>
+                </ul>
+                <p class="namelist">Для домашнего пользования существует три версии:</p>
+                <ul class="list">
+                    <li>Free</li>
+                    <li>Profesional</li>
+                    <li>Profesional Plus</li>
+                </ul>
+                <p class="namelist">Способы форматирования носителей:</p>
+                <ul class="list">
+                    <li>Простая перезапись (1 проход)</li>
+                    <li>Продвинутая перезапись (3 прохода)</li>
+                    <li>Сложная перезапись (7 проходов)</li>
+                    <li>Самая сложная перезапись (35 проходов)</li>
+                </ul>
+            </div>
+            <!--Подвал-->
+            {% include "templates/base_footer.html" %}
+
+	        <!-- Кнопка "Наверх" -->
+            <div id="scrollToTop" class="scroll-to-top">
+                <i class="fas fa-chevron-up"></i>
+            </div>
+        </div>
+
+        <script src="../static/js/up_button.js"></script>
+    </body>
+</html>

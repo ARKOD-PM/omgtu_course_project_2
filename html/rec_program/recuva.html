@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <!--Head-->
+    {% include "templates/base_head.html" %}
+    
+    <body>
+        <div id="main">
+            <!--Шапка (фото) / Верхняя линия меню (background)-->
+            {% include "templates/base_header.html" %}
+            
+            <!--Блок с информацией-->
+            <div id="container">
+                <h2>Recuva</h2>
+                <img class="progscrn" src="../static/images/recuva.png" width="30%">
+                <p>
+                    Recuva – бесплатная программа для восстановления удаленных файлов. Она поможет вам восстановить потерянные данные с разных носителей – жесткого диска компьютера или ноутбука, флешки, смартфона, камеры, mp3-плеера и т.д. Её создал британский разработчик ПО «Piriform», известный российским пользователям по утилитам ССleaner и Defraggler.
+                </p>
+                <p>
+                    По результатам проверки программ по восстановлению данных, эта программа восстановила все только что удалённые файлы, а именно 75 файлов, но не восстановила "потерянные" и системные файлы. "Потерянные" файлы "привязаны" к папкам.
+                    Опыт проводился с помощью флешки, которая была заранее отформатирована, и были загружены 75 файлов, распределённые по папкам. 10 файлов: .xls, .txt, .ppt, .pdf, .mp3, .doc; 15 файлов: .jpg.
+                </p>
+                <div class="clear"></div>
+                <p class="namelist">Для домашнего пользования существует две версии:</p>
+                <ul class="list">
+                    <li>Free</li>
+                    <li>Professional</li>
+                </ul>
+            </div>
+            <!--Подвал-->
+            {% include "templates/base_footer.html" %}
+
+	        <!-- Кнопка "Наверх" -->
+            <div id="scrollToTop" class="scroll-to-top">
+                <i class="fas fa-chevron-up"></i>
+            </div>
+        </div>
+
+        <script src="../static/js/up_button.js"></script>
+    </body>
+</html>
