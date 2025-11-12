@@ -1,0 +1,53 @@
+<div id="menu">
+    <nav id="cssmenu">
+        <div class="logovisible"><a href="index.html">Меню</a></div>
+        <div id="head-mobile"></div>
+        <div class="button"></div>
+        <ul>
+            <!-- Используем условие для добавления класса active -->
+            <li {% if active_page == 'index' %}class="active"{% endif %}><a href="{{ url_for('index') }}">ГЛАВНАЯ</a></li>
+            <li {% if active_page in ['history1', 'history2', 'history3'] %}class="active"{% endif %}>
+                <a href="">ИСТОРИИ</a>
+                <ul>
+                    <li {% if active_page == 'history1' %}class="active"{% endif %}><a href="{{ url_for('history1') }}">Питер Нортон</a></li>
+                    <li {% if active_page == 'history2' %}class="active"{% endif %}><a href="{{ url_for('history2') }}">CVX-2</a></li>
+                    <li {% if active_page == 'history3' %}class="active"{% endif %}><a href="{{ url_for('history3') }}">Адам Лэнза</a></li>
+                </ul>
+            </li>
+            <li {% if active_page in ['virtual_recovery', 'physical_recovery', 'files_remove'] %}class="active"{% endif %}>
+                <a href="">МЕТОДЫ</a>
+                <ul>
+                    <li><a href="">Восстановления</a>
+                        <ul>
+                            <li {% if active_page == 'virtual_recovery' %}class="active"{% endif %}><a href="{{ url_for('virtual_recovery') }}">Программный</a></li>
+                            <li {% if active_page == 'physical_recovery' %}class="active"{% endif %}><a href="{{ url_for('physical_recovery') }}">Физический</a></li>
+                        </ul>
+                    </li>
+                    <li {% if active_page == 'files_remove' %}class="active"{% endif %}><a href="{{ url_for('files_remove') }}">Удаления</a></li>
+                </ul>
+            </li>
+            <li {% if active_page in ['recuva', 'hetmanpr', 'r_studio', 'easeusdrw', 'ccleaner', 'eraser', 'file_shredder'] %}class="active"{% endif %}>
+                <a href="">ПРОГРАММЫ</a>
+                <ul>
+                    <li><a href="">Восстановления</a>
+                        <ul>
+                            <li {% if active_page == 'recuva' %}class="active"{% endif %}><a href="{{ url_for('recuva') }}">Recuva</a></li>
+                            <li {% if active_page == 'hetmanpr' %}class="active"{% endif %}><a href="{{ url_for('hetmanpr') }}">Hetman PR</a></li>
+                            <li {% if active_page == 'r_studio' %}class="active"{% endif %}><a href="{{ url_for('r_studio') }}">R-Studio</a></li>
+                            <li {% if active_page == 'easeusdrw' %}class="active"{% endif %}><a href="{{ url_for('easeusdrw') }}">EaseUS DRW</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Удаления</a>
+                        <ul>
+                            <li {% if active_page == 'ccleaner' %}class="active"{% endif %}><a href="{{ url_for('ccleaner') }}">CCleaner</a></li>
+                            <li {% if active_page == 'eraser' %}class="active"{% endif %}><a href="{{ url_for('eraser') }}">Eraser</a></li>
+                            <li {% if active_page == 'file_shredder' %}class="active"{% endif %}><a href="{{ url_for('file_shredder') }}">File Shredder</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li {% if active_page == 'glossary' %}class="active"{% endif %}><a href="{{ url_for('glossary') }}">ГЛОССАРИЙ</a></li>
+            <li {% if active_page == 'contacts' %}class="active"{% endif %}><a href="{{ url_for('contacts') }}">КОНТАКТЫ</a></li>
+        </ul>
+    </nav>
+</div>
