@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <!--Head-->
+    {% include "templates/base_head.html" %}
+
+    <body>
+        <div id="main">
+            <!--Шапка (фото) / Верхняя линия меню (background)-->
+            {% include "templates/base_header.html" %}
+            
+            <!--Меню-->
+            {% include "templates/base_menu.html" %}
+
+            <div id="container">
+                <div class="glossary-container">
+                    <h2>ГЛОССАРИЙ ТЕРМИНОВ</h2>
+                    
+                    <div class="search-box">
+                        <input type="text" id="searchInput" placeholder="Поиск терминов...">
+                        <i class="fas fa-search"></i>
+                    </div>
+
+                    <div class="glossary-stats" id="glossaryStats">
+                        Всего терминов: <span id="totalTerms">0</span> | Показано: <span id="shownTerms">0</span>
+                    </div>
+
+                    <div class="alphabet-filter" id="alphabetFilter">
+                    </div>
+
+                    <div class="glossary-list" id="glossaryList">
+                    </div>
+
+                    <div class="no-results" id="noResults">
+                        <i class="fas fa-search" style="font-size: 48px; margin-bottom: 20px;"></i>
+                        <h3>Термины не найдены</h3>
+                    </div>
+                </div>
+            </div>
+            <!--Подвал-->
+            {% include "templates/base_footer.html" %}
+
+	        <!-- Кнопка "Наверх" -->
+            <div id="scrollToTop" class="scroll-to-top">
+                <i class="fas fa-chevron-up"></i>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+        <script src="../static/js/menu.js"></script>
+        <script src="../static/js/up_button.js"></script>
+        <script src="../static/js/glossary.js"></script>
+    </body>
+</html>

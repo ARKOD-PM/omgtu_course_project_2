@@ -59,6 +59,10 @@ def r_studio():
 def recuva():
     return render_template("rec_program/recuva.html", title="Recuva", active_page="recuva")
 
+@app.route("/glossary.html")
+def glossary():
+    return render_template("glossary.html", title="Глоссарий", active_page="glossary")
+
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000, debug=True)
