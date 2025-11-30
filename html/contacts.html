@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <!--Head-->
+    {% include "templates/base_head.html" %}
+
+    <body>
+        <div id="main">
+            <!--Шапка (Фото) / Верхняя линия меню (background)-->
+            {% include "templates/base_header.html" %}
+
+            <!--Меню-->
+            {% include "templates/base_menu.html" %}
+            
+            <!--Блок с информацией-->
+            <div id="container">
+                <h2>ОБРАТНАЯ СВЯЗЬ</h2>
+
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                    {% if messages %}
+                        <div class="flash-messages">
+                            {% for category, message in messages %}
+                                <div class="flash {{ category }}">{{ message }}</div>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                {% endwith %}
+
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h3>Электронная почта</h3>
+                                <p>majestro.francuaze@gmail.com</p>
+                                <p>majestro-francuaze@mail.ru</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-vk"></i>
+                            <div>
+                                <h3>VK</h3>
+                                <p>https://vk.com/konstantinarkashev</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h3>Время ответа</h3>
+                                <p>Понедельник - Пятница: 9:00 - 18:00</p>
+                                <p>Суббота: 10:00 - 16:00</p>
+                                <p>Воскресенье: выходной</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form">
+                        <h3>Напишите нам</h3>
+                        <form method="POST" action="/contacts.html">
+                            <div class="form-group">
+                                <label for="name">Ваше имя</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Ваш email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Тема сообщения</label>
+                                <input type="text" id="subject" name="subject" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Сообщение</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">Отправить сообщение</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            {% include "templates/base_footer.html" %}
+
+            <div id="scrollToTop" class="scroll-to-top">
+                <i class="fas fa-chevron-up"></i>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+        <script src="../static/js/menu.js"></script>
+        <script src="../static/js/up_button.js"></script>
+    </body>
+</html>

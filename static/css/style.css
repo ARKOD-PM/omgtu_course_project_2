@@ -788,3 +788,153 @@ img.logomenus {
     font-size: 14px;
 }
 
+
+/* ====СТРАНИЦА КОНТАКТОВ==== */
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    background: #f8fafc;
+    border-radius: 10px;
+    border-left: 4px solid #2c5aa0;
+}
+
+.contact-item i {
+    font-size: 24px;
+    color: #2c5aa0;
+    margin-top: 5px;
+}
+
+.contact-item h3 {
+    color: #2c5aa0;
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.contact-item p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #4a5568;
+    text-indent: 0;
+}
+
+.contact-form {
+    background: #f8fafc;
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+}
+
+.contact-form h3 {
+    color: #2c5aa0;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+
+/* ====ИНТЕРАКТИВНЫЕ ЭЛЕМЕНТЫ==== */
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: #2c5aa0;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.scroll-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-to-top:hover {
+    background: #1e4a8a;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.scroll-to-top i {
+    font-size: 20px;
+}
+
+
+/* ====ФОРМЫ И КНОПКИ==== */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #2d3748;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background: white;
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    resize: vertical;
+    max-width: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #2c5aa0;
+    box-shadow: 0 0 0 3px rgba(44, 90, 160, 0.1);
+}
+
+.submit-btn {
+    background: #2c5aa0;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background: #1e4a8a;
+    transform: translateY(-2px);
+}
