@@ -1,6 +1,47 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, redirect, url_for, flash
+from flask_sqlalchemy import SQLAlchemy
+import os
 
 app = Flask(__name__, template_folder="html")
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///feedback.db'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.secret_key = os.environ.get('SECRET_KEY', 'secret-key-for-flash')
+
+db = SQLAlchemy(app)
+
+
+class Form(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(200), nullable=False)
+    email = db.Column(db.String(254), nullable=False)
+    topic = db.Column(db.String(300), nullable=False)
+    text = db.Column(db.Text, nullable=False)
+
+
+with app.app_context():
+    db.create_all()
+
+@app.route("/contacts.html", methods=['GET', 'POST'])
+def contacts():
+    if request.method == 'POST':
+        name = request.form['name']
+        email = request.form['email']
+        topic = request.form['subject']
+        text = request.form['message']
+
+        new_feedback = Form(name=name, email=email, topic=topic, text=text)
+        
+        try:
+            db.session.add(new_feedback)
+            db.session.commit()
+            flash('Сообщение отправлено. Спасибо за обратную связь!', 'success')
+            return redirect(url_for('contacts'))
+        except:
+            db.session.rollback()
+            flash('Произошла ошибка при отправке. Попробуйте позже.', 'error')
+
+    return render_template("contacts.html", title="Обратная связь", active_page="contacts")
+
 
 @app.route("/index.html")
 @app.route("/")
@@ -26,6 +67,10 @@ def virtual_recovery():
 @app.route("/physical_recovery.html")
 def physical_recovery():
     return render_template("physical_recovery.html", title="Физическое восстановление", active_page="physical_recovery")
+
+@app.route("/glossary.html")
+def glossary():
+    return render_template("glossary.html", title="Глоссарий", active_page="glossary")
 
 @app.route("/files_remove.html")
 def files_remove():
@@ -58,10 +103,6 @@ def r_studio():
 @app.route("/rec_program/recuva.html")
 def recuva():
     return render_template("rec_program/recuva.html", title="Recuva", active_page="recuva")
-
-@app.route("/glossary.html")
-def glossary():
-    return render_template("glossary.html", title="Глоссарий", active_page="glossary")
 
 
 if __name__ == "__main__":
