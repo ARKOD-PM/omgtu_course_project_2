@@ -1,5 +1,5 @@
 /* ====БАЗОВЫЕ СТИЛИ==== */
-* {
+* {    
     margin: 0;
     padding: 0;
     text-decoration: none;
@@ -412,6 +412,20 @@ img.logomenus {
     overflow-wrap: break-word;
     word-wrap: break-word;
     hyphens: auto;
+}
+
+
+/* ====УТИЛИТЫ==== */
+.clear {
+    clear: both;
+}
+
+li.mobilemenu {
+    display: none !important;
+}
+
+li.pcmenu {
+    display: block !important;
 }
 
 
@@ -957,4 +971,412 @@ img.logomenus {
 .submit-btn:hover {
     background: #1e4a8a;
     transform: translateY(-2px);
+}
+
+/* ====МОБИЛЬНАЯ АДАПТАЦИЯ==== */
+@media screen and (max-width: 1200px) {
+
+      #main {
+        min-width: 0;
+        width: 100%;
+    }
+
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        padding: 0 15px;
+        width: 100%;
+    }
+
+    .footer-section {
+        min-width: 0;
+        width: 100%;
+        padding: 0;
+        margin-bottom: 30px;
+    }
+    
+    .footer-section p, 
+    .footer-section a {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        white-space: normal;
+    }
+
+    .menu-center {
+        display: block;
+    }
+    
+    .logovisible {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 46px;
+        text-align: center;
+        padding: 10px 0 0 0;
+        float: none;
+    }
+
+    .progscrn {
+        float: none;
+        margin: 10px auto;
+        width: 100%;
+    }
+
+    .logohidden {
+        display: none;
+    }
+
+    li.mobilemenu {
+        display: block !important;
+    }
+    
+    li.pcmenu {
+        display: none !important;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    #cssmenu {
+        width: 100%;
+    }
+
+    #cssmenu ul {
+        width: 100%;
+        display: none;
+    }
+
+    #cssmenu ul li {
+        width: 100%;
+        border-top: 1px solid #4a5568;
+    }
+
+    #cssmenu ul li:hover {
+        background: #4a5568 !important;
+    }
+
+    #cssmenu ul ul li,
+    #cssmenu li:hover > ul > li {
+        height: auto;
+    }
+
+    #cssmenu ul li a,
+    #cssmenu ul ul li a {
+        width: 100%;
+        border-bottom: 0;
+    }
+
+    #cssmenu > ul > li {
+        float: none;
+    }
+
+    #cssmenu ul ul li a {
+        padding-left: 25px;
+    }
+
+    #cssmenu ul ul li {
+        background: #2d3748 !important;
+    }
+
+    #cssmenu ul ul li:hover {
+        background: #4a5568 !important;
+    }
+
+    #cssmenu ul ul ul li a {
+        padding-left: 35px;
+    }
+
+    #cssmenu ul ul li a {
+        color: #e2e8f0;
+        background: none;
+    }
+
+    #cssmenu ul ul li:hover > a,
+    #cssmenu ul ul li.active > a {
+        color: #ffffff;
+    }
+
+    #cssmenu ul ul,
+    #cssmenu ul ul ul {
+        position: relative;
+        left: 0;
+        width: 100%;
+        margin: 0;
+        text-align: left;
+    }
+
+    #cssmenu > ul > li.has-sub > a:after,
+    #cssmenu > ul > li.has-sub > a:before,
+    #cssmenu ul ul > li.has-sub > a:after,
+    #cssmenu ul ul > li.has-sub > a:before {
+        display: none;
+    }
+
+    #cssmenu #head-mobile {
+        display: block;
+        padding: 23px;
+        color: #e2e8f0;
+        font-size: 12px;
+        font-weight: 700;
+    }
+
+    .button {
+        width: 55px;
+        height: 46px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        cursor: pointer;
+        z-index: 12399994;
+    }
+
+    .button:after {
+        position: absolute;
+        top: 22px;
+        right: 20px;
+        display: block;
+        height: 4px;
+        width: 20px;
+        border-top: 2px solid #e2e8f0;
+        border-bottom: 2px solid #e2e8f0;
+        content: "";
+    }
+
+    .button:before {
+        -webkit-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        position: absolute;
+        top: 16px;
+        right: 20px;
+        display: block;
+        height: 2px;
+        width: 20px;
+        background: #e2e8f0;
+        content: "";
+    }
+
+    .button.menu-opened:after {
+        -webkit-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        top: 23px;
+        border: 0;
+        height: 2px;
+        width: 19px;
+        background: #ffffff;
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+
+    .button.menu-opened:before {
+        top: 23px;
+        background: #ffffff;
+        width: 19px;
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+
+    #cssmenu .submenu-button {
+        position: absolute;
+        z-index: 99;
+        right: 0;
+        top: 0;
+        display: block;
+        border-left: 1px solid #4a5568;
+        height: 46px;
+        width: 46px;
+        cursor: pointer;
+    }
+
+    #cssmenu .submenu-button.submenu-opened {
+        background: #4a5568;
+    }
+
+    #cssmenu ul ul .submenu-button {
+        height: 34px;
+        width: 34px;
+    }
+
+    #cssmenu .submenu-button:after {
+        position: absolute;
+        top: 22px;
+        right: 19px;
+        width: 8px;
+        height: 2px;
+        display: block;
+        background: #e2e8f0;
+        content: "";
+    }
+
+    #cssmenu ul ul .submenu-button:after {
+        top: 15px;
+        right: 13px;
+    }
+
+    #cssmenu .submenu-button.submenu-opened:after {
+        background: #ffffff;
+    }
+
+    #cssmenu .submenu-button:before {
+        position: absolute;
+        top: 19px;
+        right: 22px;
+        display: block;
+        width: 2px;
+        height: 8px;
+        background: #e2e8f0;
+        content: "";
+    }
+
+    #cssmenu ul ul .submenu-button:before {
+        top: 12px;
+        right: 16px;
+    }
+
+    #cssmenu .submenu-button.submenu-opened:before {
+        display: none;
+    }
+
+    #cssmenu ul ul ul li.active a {
+        border-left: none;
+    }
+
+    #cssmenu > ul > li.has-sub > ul > li.active > a,
+    #cssmenu > ul ul > li.has-sub > ul > li.active > a {
+        border-top: none;
+    }
+    
+    .photo {
+        max-width: 80%;
+        width: auto;
+        height: auto;
+        display: block;
+        margin: 10px auto;
+        float: none;
+    }
+}
+
+@media (max-width: 1200px) {
+    .footer-content {
+        flex-direction: column;
+    }
+    
+    .footer-section {
+        margin-bottom: 30px;
+    }
+    
+    .scroll-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+    }
+    
+    .glossary-container {
+        padding: 10px;
+    }
+    
+    .search-box {
+        max-width: 100%;
+    }
+    
+    .alphabet-filter {
+        gap: 5px;
+    }
+    
+    .alphabet-filter button {
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+    }
+    
+    .glossary-item {
+        padding: 20px;
+    }
+    
+    #container {
+        padding: 10px 20px 30px 20px;
+        margin: 10px;
+    }
+    
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .contact-item {
+        padding: 15px;
+    }
+    
+    .contact-form {
+        padding: 20px;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .footer-bottom-content {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .footer-legal {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+    
+    .image-with-caption {
+        float: none;
+        margin: 10px auto;
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    #footer {
+        padding: 30px 0 0 0;
+    }
+    
+    .footer-content {
+        padding: 0 15px;
+        gap: 25px;
+    }
+    
+    .footer-bottom {
+        margin-top: 30px;
+        padding: 15px;
+    }
+    
+    .search-box input {
+        font-size: 14px;
+        padding: 12px 35px 12px 15px;
+    }
+    
+    .image-with-caption {
+        width: 95%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
 }
