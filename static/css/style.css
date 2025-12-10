@@ -1,5 +1,5 @@
 /* ====БАЗОВЫЕ СТИЛИ==== */
-* {    
+* {
     margin: 0;
     padding: 0;
     text-decoration: none;
@@ -973,6 +973,7 @@ li.pcmenu {
     transform: translateY(-2px);
 }
 
+
 /* ====МОБИЛЬНАЯ АДАПТАЦИЯ==== */
 @media screen and (max-width: 1200px) {
 
@@ -1378,5 +1379,126 @@ li.pcmenu {
     .footer-content {
         grid-template-columns: 1fr 1fr;
         gap: 30px;
+    }
+}
+
+/* ====МОБИЛЬНАЯ АДАПТАЦИЯ (ШРИФТ 12pt)==== */
+@media screen and (max-width: 768px) {
+    p {
+        font-size: 12pt;       
+        line-height: 1.5;      
+        text-indent: 15px;     
+        margin: 10px 5px;
+    }
+
+    p.namelist {
+        text-indent: 15px;
+    }
+
+    ol.list > li, ul.list > li {
+        font-size: 12pt;
+        line-height: 1.5;
+    }
+
+    h1 {
+        font-size: 24px;
+        padding-top: 15px;
+    }
+    
+    h2 {
+        font-size: 20px;
+    }
+
+    .caption {
+        font-size: 13px;
+        line-height: 1.35;
+    }
+
+    #container {
+        padding: 15px 10px; 
+        width: auto;        
+        min-width: 0;       
+        margin: 10px;
+        overflow: hidden;
+    }
+
+    .contact-content {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contact-form, .contact-info, .contact-item {
+        width: 100%;        
+        max-width: 100%;
+        padding: 15px;      
+        box-sizing: border-box;
+    }
+
+    .contact-item p, 
+    .contact-item h3, 
+    .contact-item div {
+        overflow-wrap: break-word;
+        word-break: break-word;
+        word-wrap: break-word;
+        min-width: 0;
+    }
+    
+    .form-group textarea {
+        resize: none;       
+        height: 160px;
+        font-size: 16px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .form-group input {
+        font-size: 16px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .submit-btn {
+        width: 100%;
+        padding: 15px;
+        font-size: 18px;
+    }
+
+    /* === 4. ГЛОССАРИЙ  === */
+     .glossary-list {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr); 
+        width: 100%;
+    }
+
+    .glossary-item {
+        width: 100%;          
+        max-width: 100%;      
+        padding: 15px;        
+        box-sizing: border-box;
+    }
+
+    .glossary-term {
+        display: flex;
+        flex-wrap: wrap;      
+        gap: 5px;             
+        width: 100%;
+    }
+
+    .glossary-term h3 {
+        width: 100%;                
+        font-size: 18px;
+        overflow-wrap: break-word;  
+        word-break: break-word;     
+        hyphens: auto;              
+        padding-right: 0;           
+    }
+
+    .glossary-category {
+        margin-top: 5px;      
+        align-self: flex-start; 
+        max-width: 100%;      
+        white-space: normal;  
+        text-align: left;
     }
 }
